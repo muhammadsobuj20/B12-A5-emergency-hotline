@@ -1,19 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Emergency Hotline</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- daisyui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- tailwindcss -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- fortawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- google font  -->
+
+    <!-- Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"rel="stylesheet"/>
+       
+      <!-- Hind Madurai -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         
+      <!-- Roboto -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Emergency Hotline</title>
+  </head>
+  <body>
+    <header>
+      <!-- navigation section-->
+      <nav id="navigation" class=" container  mx-auto">
+        <div class=" flex flex-col md:flex-row justify-between items-center px-14 py-6">
+          <div class="flex justify-center items-center gap-4">
+            <img class="w-12 h-12" src="./assets/logo.png" alt="" />
+            <div class="">
+              <h1 class="font-[Hind Madurai] text-3xl font-bold text-[#006747]">Emergency <br>Service</h1>
+            </div>
+          </div>
+          <div class="flex justify-center items-center gap-5">
+            <p class="bg-[#41FF6B1A] flex justify-center items-center  gap-2 px-5 py-2 font-medium rounded-full"><span>0</span><img class="w-4 h-4" src="./assets/heart.png" alt="heart" /></p>
+            <p class="bg-[#41FF6B1A] flex justify-center items-center gap-2 px-5 py-2 font-medium rounded-full"><img class="w-4 h-4 " src="./assets/coin.png" alt="heart" /> <span>100</span></p>
+            <p class="bg-[#00A63E] flex justify-center items-center gap-2 px-5 py-2 font-medium rounded-full text-white"><span></span>copy</p>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-
-
-
-
-
-
-        <script src="./js/index.js"></script>
-</body>
+    <script src="./js/index.js"></script>
+  </body>
 </html>
