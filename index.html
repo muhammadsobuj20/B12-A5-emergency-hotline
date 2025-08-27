@@ -32,14 +32,6 @@
       rel="stylesheet"
     />
 
-    <!-- Hind Madurai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
     <!-- Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,7 +42,7 @@
     <title>Emergency Hotline</title>
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
   </head>
-  <body>
+  <body class="font-[Inter]">
     <header>
       <!-- navigation section-->
       <nav id="navigation" class="container mx-auto">
@@ -60,7 +52,7 @@
           <div class="flex justify-center items-center gap-4">
             <img class="w-12 h-12" src="./assets/logo.png" alt="" />
             <div class="">
-              <h1 class="font-[Hind Madurai] text-3xl font-bold text-[#006747]">
+              <h1 class=" text-3xl font-bold text-[#006747]">
                 Emergency <br />Service
               </h1>
             </div>
@@ -70,14 +62,14 @@
             <p
               class="bg-[#41FF6B1A] flex justify-center items-center gap-2 px-5 py-2 font-medium rounded-full"
             >
-              <span id="">0</span
+              <span id="heart-count">0</span
               ><img class="w-4 h-4" src="./assets/heart.png" alt="heart" />
             </p>
             <p
               class="bg-[#41FF6B1A] flex justify-center items-center gap-2 px-5 py-2 font-medium rounded-full"
             >
-              <img class="w-4 h-4" src="./assets/coin.png" alt="heart" />
-              <span id="">100</span>
+              <img class="w-4 h-4" src="./assets/coin.png" alt="coin" />
+              <span id="coin-count">100</span>
             </p>
             <p
               class="bg-[#00A63E] flex justify-center items-center gap-2 px-5 py-2 font-medium rounded-full text-white"
@@ -115,135 +107,142 @@
   <section class="w-11/12 mx-auto grid lg:grid-cols-12 gap-8 py-8">
     
     <!-- Left side: Cards -->
-    <section class="cart-container font-[Hind Madurai] col-span-9 grid lg:grid-cols-3 gap-4">
+    <section class="cart-container font-[Hind Madurai] lg:col-span-9 grid lg:grid-cols-3 gap-4">
+
        <!-- -----card--1 -->
        <div class="bg-white rounded-xl shadow p-5  gap-3">
        <div class="flex justify-between items-center">
-        <div class="bg-red-100 rounded-md m-4 w-8"><img src="./assets/emergency.png" alt="">
+        <div class="bg-red-100 rounded-md m-4 p-3 ">
+          <img class="w-8" src="./assets/emergency.png" alt="">
         </div>
         <button class="text-xl">❤️</button>
           </div>
         <div>
-          <h2 class="font-bold">National Emergency Number</h2>
-          <p class="text-sm text-gray-500">National Emergency</p>
+          <h2 class="font-bold ">National Emergency Number</h2>
+          <p class="text-sm text-gray-500 font-[Roboto]">National Emergency</p>
         </div>
       <div class="">
-        <p class="text-2xl font-bold">999</p>
-        <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-4 ">All</span>
+        <p class="text-xl font-bold">999</p>
+        <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-4 font-[Roboto]">All</span>
       </div>
       <div class="flex gap-2 mt-4">
-        <button class="copyBtn w-1/2 bg-gray-100 py-2 rounded hover:bg-gray-200">Copy</button>
-        <button class="callBtn w-1/2 bg-emerald-600 text-white py-2 rounded hover:bg-emerald-700">Call</button>
+        <button class="copy-btn w-1/2 bg-gray-100 py-2 rounded hover:bg-gray-200">Copy</button>
+        <button class="call-btn w-1/2 bg-emerald-600 text-white py-2 rounded hover:bg-emerald-700">Call</button>
       </div>
     </div>
   
         <!-- -----card--2 -->
        <div class="bg-white rounded-xl shadow p-5 gap-3">
       <div class="flex justify-between items-center">
-        <div class="bg-blue-100 rounded-md m-4 w-8"><img src="./assets/police.png" alt="">
+        <div class="bg-blue-100 rounded-md m-4 p-3">
+          <img class="w-8" src="./assets/police.png" alt="">
         </div>
         <button class="text-xl">❤️</button>
           </div>
         <div>
           <h2 class="font-bold">Police Helpline Number</h2>
-          <p class="text-sm text-gray-500">Police</p>
+          <p class="text-sm text-gray-500 font-[Roboto]">Police</p>
         </div>
     
       <div>
-        <p class="text-2xl font-bold">999</p>
-        <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-4">Police</span>
+        <p class="text-xl font-bold">999</p>
+        <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-4 font-[Roboto] ">Police</span>
       </div>
       <div class="flex gap-2 mt-4">
-        <button class="copyBtn w-1/2 bg-gray-100 py-2 rounded hover:bg-gray-200">Copy</button>
-        <button class="callBtn w-1/2 bg-emerald-600 text-white py-2 rounded hover:bg-emerald-700">Call</button>
+        <button class="copy-btn w-1/2 bg-gray-100 py-2 rounded hover:bg-gray-200">Copy</button>
+        <button class="call-btn w-1/2 bg-emerald-600 text-white py-2 rounded hover:bg-emerald-700">Call</button>
       </div>
     </div>
 
         <!-- -----card--3 -->
        <div class="bg-white rounded-xl shadow p-5 gap-3">
       <div class="flex justify-between items-center">
-        <div class="bg-red-100 rounded-md m-4 w-8"><img src="./assets/ambulance.png" alt="">
+        <div class="bg-red-100 rounded-md m-4 p-3">
+          <img class="w-8" src="./assets/ambulance.png" alt="">
         </div>
         <button class="text-xl">❤️</button>
           </div>
         <div>
-          <h2 class="font-bold">Ambulance Service</h2>
-          <p class="text-sm text-gray-500">Ambulance</p>
+          <h2 class="font-bold ">Ambulance Service</h2>
+          <p class="text-sm text-gray-500 font-[Roboto]">Ambulance</p>
         </div>
     
       <div>
-        <p class="text-2xl font-bold">1994-999999</p>
-        <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-4">Ambulance</span>
+        <p class="text-xl font-bold">1994-999999</p>
+        <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-4 font-[Roboto]">Ambulance</span>
       </div>
       <div class="flex gap-2 mt-4">
-        <button class="copyBtn w-1/2 bg-gray-100 py-2 rounded hover:bg-gray-200">Copy</button>
-        <button class="callBtn w-1/2 bg-emerald-600 text-white py-2 rounded hover:bg-emerald-700">Call</button>
+        <button class="copy-btn w-1/2 bg-gray-100 py-2 rounded hover:bg-gray-200">Copy</button>
+        <button class="call-btn w-1/2 bg-emerald-600 text-white py-2 rounded hover:bg-emerald-700">Call</button>
       </div>
     </div>
 
         <!-- -----card--4 -->
        <div class="bg-white rounded-xl shadow p-5 gap-3">
       <div class="flex justify-between items-center">
-        <div class="bg-blue-100 rounded-md m-4 w-8"><img src="./assets/brac.png" alt="">
+        <div class="bg-blue-100 rounded-md m-4 p-3">
+          <img class="w-8" src="./assets/brac.png" alt="">
         </div>
         <button class="text-xl">❤️</button>
           </div>
         <div>
-          <h2 class="font-bold">Brac Helpline</h2>
-          <p class="text-sm text-gray-500">Brac</p>
+          <h2 class="font-bold ">Brac Helpline</h2>
+          <p class="text-sm text-gray-500 font-[Roboto]">Brac</p>
         </div>
     
       <div>
-        <p class="text-2xl font-bold">16445</p>
-        <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-4">NGO</span>
+        <p class="text-xl font-bold">16445</p>
+        <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-4 font-[Roboto]">NGO</span>
       </div>
       <div class="flex gap-2 mt-4">
-        <button class="copyBtn w-1/2 bg-gray-100 py-2 rounded hover:bg-gray-200">Copy</button>
-        <button class="callBtn w-1/2 bg-emerald-600 text-white py-2 rounded hover:bg-emerald-700">Call</button>
+        <button class="copy-btn w-1/2 bg-gray-100 py-2 rounded hover:bg-gray-200">Copy</button>
+        <button class="call-btn w-1/2 bg-emerald-600 text-white py-2 rounded hover:bg-emerald-700">Call</button>
       </div>
     </div>
 
         <!-- -----card--5 -->
        <div class="bg-white rounded-xl shadow p-5 gap-3">
       <div class="flex justify-between items-center">
-        <div class="bg-orange-100 rounded-md m-4 w-8"><img src="./assets/Bangladesh-Railway.png" alt="">
+        <div class="bg-orange-100 rounded-md m-4 p-3">
+          <img class="w-8" src="./assets/Bangladesh-Railway.png" alt="">
         </div>
         <button class="text-xl">❤️</button>
           </div>
         <div>
-          <h2 class="font-bold">Bangladesh Railway Helpline </h2>
-          <p class="text-sm text-gray-500">Bangladesh Railway</p>
+          <h2 class="font-bold ">Bangladesh Railway Helpline </h2>
+          <p class="text-sm text-gray-500 font-[Roboto]">Bangladesh Railway</p>
         </div>
     
       <div>
-        <p class="text-2xl font-bold">163</p>
-        <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-4">Travel</span>
+        <p class="text-xl font-bold font-[Roboto]">163</p>
+        <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-4 font-[Roboto]">Travel</span>
       </div>
       <div class="flex gap-2 mt-4">
-        <button class="copyBtn w-1/2 bg-gray-100 py-2 rounded hover:bg-gray-200">Copy</button>
-        <button class="callBtn w-1/2 bg-emerald-600 text-white py-2 rounded hover:bg-emerald-700">Call</button>
+        <button class="copy-btn w-1/2 bg-gray-100 py-2 rounded hover:bg-gray-200">Copy</button>
+        <button class="call-btn w-1/2 bg-emerald-600 text-white py-2 rounded hover:bg-emerald-700">Call</button>
       </div>
     </div>
 
         <!-- -----card--6 -->
        <div class="bg-white rounded-xl shadow p-5 gap-3">
       <div class="flex justify-between items-center">
-        <div class="bg-blue-100 rounded-md m-4 w-8"><img src="./assets/police.png" alt="">
+        <div class="bg-blue-100 rounded-md m-4 p-3">
+          <img class="w-8" src="./assets/police.png" alt="">
         </div>
         <button class="text-xl">❤️</button>
           </div>
         <div>
-          <h2 class="font-bold">Anti-Corruption Helpline</h2>
-          <p class="text-sm text-gray-500">Anti-Corruption</p>
+          <h2 class="font-bold ">Anti-Corruption Helpline</h2>
+          <p class="text-sm text-gray-500 font-[Roboto]">Anti-Corruption</p>
         </div>
     
       <div>
-        <p class="text-2xl font-bold">106</p>
-        <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-4">Govt</span>
+        <p class="text-xl font-bold font-[Roboto]">106</p>
+        <span class="text-xs bg-gray-200 px-2 py-1 rounded mt-4 font-[Roboto]">Govt</span>
       </div>
       <div class="flex gap-2 mt-4">
-        <button class="copyBtn w-1/2 bg-gray-100 py-2 rounded hover:bg-gray-200">Copy</button>
-        <button class="callBtn w-1/2 bg-emerald-600 text-white py-2 rounded hover:bg-emerald-700">Call</button>
+        <button class="copy-btn w-1/2 bg-gray-100 py-2 rounded hover:bg-gray-200">Copy</button>
+        <button class="call-btn w-1/2 bg-emerald-600 text-white py-2 rounded hover:bg-emerald-700">Call</button>
       </div>
     </div>
 
@@ -251,15 +250,22 @@
     </section>
 
     <!-- Right side: Call History -->
-    <aside class="col-span-3">
-      <section class="bg-white p-4 rounded-lg shadow-sm">
-        <div class=" flex justify-between items-center md:w-full">
+    <aside class="lg:col-span-3  bg-white">
+      <section class=" p-4 rounded-lg">
+        <div class=" flex justify-between items-center ">
           <h1 class="text-[#111] font-semibold text-xl">Call History</h1>
-          <button class="bg-[#00A63E] flex justify-center items-center gap-2 px-5 py-2 font-medium rounded-full text-white">
-            Clear
-          </button>
+          <button id="clear-history" class="bg-[#00A63E] flex justify-center items-center gap-2 px-5 py-2 font-medium rounded-full text-white">Clear</button>
         </div>
       </section>
+      <div class="history-container"></div>
+      <div id="history-list" class="flex justify-between items-center bg-gray-100 p-4 m-3 
+       rounded-lg shadow-sm [Hind Madurai]">
+        <div>
+          <h2 class="font-bold text-xl text-[#111]">Ambulance Service</h2>
+          <p class="text-lg font-medium text-gray-400">1994-999999</p>
+        </div>
+        <p class="text-gray-400"><span>11:36:58</span>AM</p>
+      </div>
     </aside>
   </section>
 </main>
