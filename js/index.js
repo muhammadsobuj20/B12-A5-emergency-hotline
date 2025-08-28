@@ -24,55 +24,102 @@ const clearHistory = document.getElementById("clear-history");
 // heart
 heartButtons.forEach(function (id) {
   id.addEventListener("click", function () {
+    heartCountEl.innerText = heartCount;
     heartCount++;
-    heartCount.innerText = heartCount;
+  });
+});
+
+// copy
+copyButtons.forEach(function (id) {
+  id.addEventListener("click", function () {
+    const number =
+      this.parentElement.previousElementSibling.querySelector("p").innerText;
+    navigator.clipboard.writeText(number);
+    copyCountEl.innerText=copyCount
+    copyCount++;
+
+    alert(`This number is Copied:  ${number}`);
   });
 });
 
 // callBUTTONs
 callButtons.forEach(function (id) {
   id.addEventListener("click", function () {
-    const callCard =
-      this.closest("div-bg-white")
-      const title=callCard.querySelector("h2").innerText;
-      const number=callCard.querySelector("p.text-xl").innerText;
-   
-   if(coinCount>=20){
-        coinCount -= 20;
-        coinCountEl.innerText=coinCount;
-        console.log("ddddddd");
-   }
-    alert("callig" + title + " (" + number + ")...less 20 coin");
+const callCard = this.closest(".card-parent");
+const title = callCard.querySelector(".text-title").innerText;
+const number = callCard.querySelector(".call-number").innerText;
+
+    if (coinCount >= 20) {
+      coinCount -= 20;
+      coinCountEl.innerText = coinCount;
+
+    alert(`Calling ${title} at ${number}. Coins deducted: 20`);
+
+const newHistoryItem = document.createElement("div");
+newHistoryItem.classList.add(
+  "flex",
+  "justify-between",
+  "items-center",
+  "bg-gray-100",
+  "p-4",
+  "m-3",
+  "rounded-lg",
+  "shadow-sm"
+);
+const now = new Date();
+const time = now.toLocaleTimeString("en-US", {
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+});
+
+newHistoryItem.innerHTML = `
+ <div>
+ <h2 class="font-bold text-sm text-[#111]">${title}</h2>
+ <p class="text-sm font-medium text-gray-400">${number}</p>
+ </div>
+ <p class="text-gray-400 text-xs"><span>${time}</span></p>
+
+
+ `;
+callHistory.append(newHistoryItem);
+} else {
+    alert(`❌You don't have enough "Coins" to make this call`);
+  }
   });
 });
 
+// heartButtons.forEach(function (btn) {
+//   btn.addEventListener("click", function () {
+//     heartCount++;
+//     heartCountEl.innerText = heartCount;
+//   });
+// });
 
-// copy 
-copyButtons.forEach(function (id) {
-  id.addEventListener("click", function () {
-    const number =
-      this.parentElement.previousElementSibling.querySelector("P").innerText;
-    navigator.clipboard.writeText(number);
-    copyCount++;
-    copyCountEl.innerText = coinCount;
-    alert("This number is Copied" + number);
+clearHistory.addEventListener("click", function () {
+ const clearCallHistory= document.querySelector(".history-container")
+ clearCallHistory.textContent="";
 
-
-
-
- const currentTime = new Date(); 
- const timeString = currentTime.toLocaleTimeString(); 
-const historyItem = document.createElement("div"); 
-historyItem.className = "flex justify-between items-center bg-gray-100 p-4 m-3 rounded-lg shadow-sm"; 
-historyItem.innerHTML = '<div>' + '<h2 class="font-bold text-xl text-[#111]">' + title + "</h2>" + '<p class="text-lg font-medium text-gray-400">' + number + "</p>" + "</div>" + '<p class="text-gray-400">' + timeString + "</p>";
- historyContainer.prepend(historyItem); 
-   
-        alert("insufficient found") 
 });
-});
- 
- heartButtons.forEach(function (btn) { btn.addEventListener("click", function () { heartCount++; heartCountEl.innerText = heartCount; }); });
- 
- 
- clearHistoryBtn.addEventListener("click", function () { 
-        historyContainer.innerHTML = ""; });
+
+// Function to handle "call" button clicks
+// const handleCallClick = (event) => {
+//   const card = event.target.closest(".parent-div");
+//   const serviceName = card.querySelector("h2.text-title").textContent;
+//   const serviceNumber = card.querySelector("p.call-number").textContent;
+
+
+  // Show success alert
+//   if (coinCount >= 20) {
+//     alert(`Calling ${serviceName} at ${serviceNumber}. Coins deducted: 20`);
+//   } 
+// };
+
+// Function to handle "clear history" button click
+// const handleClearHistoryClick = () => {
+//   while (historyListEl.firstChild) {
+//     historyListEl.removeChild(historyListEl.firstChild);
+//   }
+//   // Remove the initial history item from the DOM
+//   document.querySelector(".history-container > div").remove();
+// };
