@@ -40,10 +40,10 @@ callButtons.forEach(function (id) {
     const number = callCard.querySelector(".call-number").innerText;
 
     if (coinCount >= 20) {
-      coinCount = 20;
+      coinCount -= 20;
       coinCountEl.innerText = coinCount;
 
-      alert(`Calling ${title} at ${number}. Coins deducted: 20`);
+      alert(`📞Calling ${title} at ${number}. Coins deducted: 20`);
 
       const newHistoryItem = document.createElement("div");
       newHistoryItem.classList.add(
